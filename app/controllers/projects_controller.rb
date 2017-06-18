@@ -1,10 +1,11 @@
 class ProjectsController < ApplicationController
+  before_action :find_adminusers
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.all.order('created_at DESC')
   end
 
   # GET /projects/1
@@ -14,7 +15,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    @project = @adminuser.projects.new
   end
 
   # GET /projects/1/edit
@@ -24,11 +25,11 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
+    @project = @adminuser.projects.new(project_params)
 
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to adminuser_project_path(@adminuser), notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
@@ -65,6 +66,9 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+    def find_adminusers
+      @adminuser = Adminuser.find(params[:adminuser_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

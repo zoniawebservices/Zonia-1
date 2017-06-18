@@ -28,7 +28,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'owlcarousel-rails'
-
+gem 'bcrypt-ruby', '~> 3.0.0', :require => "bcrypt"
 gem 'devise'
 gem 'carrierwave'
 gem "mini_magick"

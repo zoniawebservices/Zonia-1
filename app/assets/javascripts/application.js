@@ -13,15 +13,16 @@
 //= require ckeditor/init
 //= require jquery
 //= require bootstrap.min
-//= require jquery.stellar.min
+//= require jquery.magnific-popup.min
 //= require jquery.appear
+//= require general
 //= require jquery_ujs
 //= require turbolinks
 //= require owl.carousel
-//= require_tree .
+//= require jquery.stellar.min
+
 //= require cable
 //= require wow.min
-//= require jquery.magnific-popup.min.
 //= require jquery.validate.min
 //= require jquery.animateNumber.min
 //= require general

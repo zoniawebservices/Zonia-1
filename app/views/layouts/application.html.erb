@@ -58,7 +58,7 @@
 
                             <!-- Logo Small -->
                             <div class="small">
-                                <span class="navbar-brand" ><%=image_tag 'logo.png' %></span>
+                                <span class="navbar-brand" ><%=image_tag 'logo.png', :class => "lo"  %></span>
                             </div>
                             <!-- /Logo Small -->
 
@@ -71,12 +71,14 @@
                     <!-- Navigation -->
                     <div id="main-menu" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
+                            <li><a href="#"> Welcome <%= current_adminuser.name %></a></li>
+                          <%if adminuser_signed_in? %>
+                          <li><%= link_to "Dashboard", adminusers_path, class: "smooth-scroll" %></li>
+                            <li><%= link_to "Log Out!!", destroy_adminuser_session_path, :method => :delete, :class =>"smooth-scroll"  %>
+
+                          <%else %>
+                            <li class="Smooth-scroll">
                                 <a class="dropdown-toggle" href="#home">Home</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="index-smooth-scroll.html">Home - One Page</a></li>
-                                    <li><a href="index.html">Home - Multi-Page</a></li>
-                                </ul>
                             </li>
                             <li><a class="smooth-scroll" href="#about">About</a></li>
                             <li><a class="smooth-scroll" href="#projects">Projects</a></li>
@@ -86,6 +88,7 @@
                             <li><a class="smooth-scroll" href="#testimonials">Testimonials</a></li>
                             <li><a class="smooth-scroll" href="#price">Price</a></li>
                             <li><a class="smooth-scroll" href="#contact">Contact</a></li>
+                          <% end %>
                         </ul>
                     </div>
                     <!-- /Navigation -->
