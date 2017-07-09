@@ -150,6 +150,12 @@ body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.secbg{
+  background-position: center;
+  background-repeat: no-repeat;
+  height:200px;
+  background-size: cover;
+}
 .mt {
   margin-top: 50px;
 }
@@ -2255,6 +2261,7 @@ label.error {
   transition: all 0.5s ease-in-out;
   width: 100%;
   max-width: 100%;
+  height: auto;
 }
 .project .project-image .information {
   position: absolute;

@@ -1,10 +1,16 @@
-@import "bootstrap.min";
+
+
 @import "animate.min";
-@import "demo";
+
+@import "bootstrap.min";
 @import "light-bootstrap-dashboard";
+@import "demo";
 @import "pe-icon-7-stroke";
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
+body{
+  overflow:auto;
+}
 .bg{
   background-image: asset_url("banner.png");
   background-size: cover ;
