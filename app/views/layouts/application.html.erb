@@ -20,87 +20,87 @@
 <!-- /Preloader -->
 
 <!-- Header -->
-<header id="home" class="header">
+<%= render "shared/header" %>
+<!-- Modal: Get In Touch -->
+<div class="modal fade" id="get-in-touch" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
 
-    <!-- Navigation -->
-    <nav id="navigation" class="navbar affix">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">Get In Touch</h4>
+            </div>
 
-                    <!-- Navigation Header -->
-                    <div class="navbar-header">
+            <div class="modal-body">
+                <div class="row">
 
-                        <!-- Toggle Button -->
-                        <button type="button"
-                                class="navbar-toggle collapsed"
-                                data-toggle="collapse"
-                                data-target="#main-menu"
-                                aria-expanded="false"
-                                aria-controls="main-menu">
-
-                            <span class="sr-only">Toggle Navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-
-                        </button>
-                        <!-- /Toggle Button -->
-
-                        <!-- Brand -->
-                        <a href="#" class="brand">
-
-                            <!-- Logo Big -->
-                            <div class="big">
-                                <span class="navbar-brand"><%=image_tag 'logo.png', :class => "lo" %></span> Zonia Tech
+                    <!-- Contact Form -->
+                    <div class="col-md-12 contact-form">
+                        <form class="form-ajax" method="post">
+                            <input type="hidden" name="form" value="Get In Touch Modal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name... *" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" name="email" class="form-control" placeholder="E-mail address... *" required>
+                                </div>
                             </div>
-                            <!-- /Logo Big -->
-
-                            <!-- Logo Small -->
-                            <div class="small">
-                                <span class="navbar-brand" ><%=image_tag 'logo.png', :class => "lo"  %></span>
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <textarea name="message" class="form-control" placeholder="Message... "></textarea>
+                                </div>
                             </div>
-                            <!-- /Logo Small -->
-
-                        </a>
-                        <!-- /Brand -->
-
+                            <div class="row">
+                                <div class="form-group col-md-12 text-center">
+                                    <button type="submit" class="btn btn-theme"><i class="icon fa fa-fw fa-paper-plane-o"></i> <span class="text">Send Message</span></button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <!-- /Navigation Header -->
+                    <!-- /Contact Form -->
 
-                    <!-- Navigation -->
-                    <div id="main-menu" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-
-                          <%if adminuser_signed_in? %>
-                              <li><a href="#"> Welcome <%= current_adminuser.name %></a></li>
-                          <li><%= link_to "Dashboard", adminusers_path, class: "smooth-scroll" %></li>
-                            <li><%= link_to "Log Out!!", destroy_adminuser_session_path, :method => :delete, :class =>"smooth-scroll"  %>
-
-                          <%else %>
-                            <li class="Smooth-scroll">
-                                <a class="dropdown-toggle" href="#home">Home</a>
-                            </li>
-                            <li> <%= link_to "Projects", projects_path, class: "smooth-scroll" %></li>
-
-                            <li><a class="smooth-scroll" href="#services">Services</a></li>
-                            <li><a class="smooth-scroll" href="#our-team">Team</a></li>
-                            <li><a class="smooth-scroll" href="#features">Features</a></li>
-                            <li><a class="smooth-scroll" href="#testimonials">Testimonials</a></li>
-                            <li><a class="smooth-scroll" href="#price">Price</a></li>
-                            <li><a class="smooth-scroll" href="#contact">Contact</a></li>
-                          <% end %>
-                        </ul>
-                    </div>
-                    <!-- /Navigation -->
 
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- /Navigation -->
 
-    <%= yield %>
+        </div>
+    </div>
+</div>
+<!-- Modal: /Get In Touch -->
+
+<!-- Modal: Result Message -->
+<div class="modal fade" id="result" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h4 class="modal-title">Sending message</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="result-icon">
+                    <div class="icon-border">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" preserveAspectRatio="none">
+                            <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                        </svg>
+                        <i class="icon fa fa-check"></i>
+                    </div>
+                </div>
+
+                <p class="modal-result h4 text-center"></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /Modal: Result Message -->
 <script text="text/javascript">
 $(function(){ // this replaces document.ready
   setTimeout(function(){

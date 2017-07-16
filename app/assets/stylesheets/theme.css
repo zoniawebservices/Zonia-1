@@ -82,7 +82,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import 'bootstrap.min.css';
 @import 'bootstrap-theme.min.css';
-@import 'font-awesome.min.css';
 @import 'owl.carousel.css';
 @import 'owl.theme.css';
 @import 'owl.transitions.css';
@@ -729,6 +728,7 @@ label.error {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   max-width: 100%;
+  height:300px;
 }
 .gallery-image::before {
   -webkit-transition: all 0.5s ease-in-out;

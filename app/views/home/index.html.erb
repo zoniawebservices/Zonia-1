@@ -36,7 +36,7 @@
                 <!-- About Block -->
                 <div class="col-md-3 col-sm-6 col animated fadeIn wow" data-wow-duration="0.9s" data-wow-delay="0.2s">
                     <i class="icon icon_cloud_alt"></i>
-                    <h3 class="title">Frontend Development</h3>
+                    <h3 class="title">Full Stack Web & Mobile App  Development</h3>
                     <p class="description">
                         There are many variations of passages of Lorem Ipsum available.
                     </p>
@@ -70,3 +70,129 @@
         </div>
     </section>
     <!-- /Section: About -->
+    <%= render 'shared/projects' %>
+
+
+
+    <section id="services" class="section">
+      <div class="container">
+
+          <!-- Section Header -->
+          <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                  <header class="text-center">
+                      <h2 class="section-title underline">Services</h2>
+                      <p class="section-subtitle">
+                          There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                          alteration in some form, by injected humour.
+                      </p>
+                  </header>
+              </div>
+          </div>
+          <!-- /Section Header -->
+
+          <!-- Section Content -->
+          <div class="row section-content">
+
+              <!-- Service Block -->
+              <div class="service clearfix">
+
+                  <!-- Service Image -->
+                  <div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">
+                      <div class="image">
+                          <%= image_tag 'devices.png' %>
+                      </div>
+                  </div>
+                  <!-- /Service Image -->
+
+                  <!-- Service Description -->
+                  <div class="col-sm-5 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">
+                      <h3 class="title">Web Design</h3>
+                      <p class="description">
+                          It is a long established fact that a reader will be distracted by the readable content of a
+                          page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                          more-or-less normal distribution of letters.
+                      </p>
+                      <a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>
+                  </div>
+                  <!-- /Service Description -->
+
+              </div>
+              <!-- /Service Block -->
+
+              <!-- Service Block -->
+              <div class="service clearfix">
+
+                  <!-- Service Description -->
+                  <div class="col-sm-5 col-sm-offset-1 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">
+                      <h3 class="title">Frontend Development</h3>
+                      <p class="description">
+                          It is a long established fact that a reader will be distracted by the readable content of a
+                          page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                          more-or-less normal distribution of letters.
+                      </p>
+                      <a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>
+                  </div>
+                  <!-- /Service Description -->
+
+                  <!-- Service Image -->
+                  <div class="col-sm-5 col-xs-12 hidden-xs animated fadeInRight wow" data-wow-duration="1.5s">
+                      <div class="image">
+                          <%= image_tag "frontend.png" %>
+                      </div>
+                  </div>
+                  <!-- /Service Image -->
+
+              </div>
+              <!-- /Service Block -->
+
+              <!-- Service Block -->
+              <div class="service clearfix">
+
+                  <!-- Service Image -->
+                  <div class="col-sm-5 col-sm-offset-1 col-xs-12 hidden-xs animated fadeInLeft wow" data-wow-duration="1.5s">
+                      <div class="image">
+                            <%= image_tag "plot.png" %>
+                      </div>
+                  </div>
+                  <!-- /Service Image -->
+
+                  <!-- Service Description -->
+                  <div class="col-sm-5 col-xs-12 animated fadeIn wow" data-wow-duration="0.9s">
+                      <h3 class="title">SEO Optimization</h3>
+                      <p class="description">
+                          It is a long established fact that a reader will be distracted by the readable content of a
+                          page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                          more-or-less normal distribution of letters.
+                      </p>
+                      <a href="#" class="btn btn-theme" data-toggle="modal" data-target="#get-in-touch">Get In Touch</a>
+                  </div>
+                  <!-- /Service Description -->
+
+              </div>
+              <!-- /Service Block -->
+
+          </div>
+          <!-- /Section Content -->
+
+      </div>
+    </section>
+  <section class="section trigger mask" style="background-image: url(<%= asset_path ('get-start-now.jpg') %>)" data-stellar-background-ratio="0.6">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-md-6 col-md-offset-3 text-center animated bounceIn wow" data-wow-duration="1.5s">
+
+                  <h2 class="trigger-title text-white">Get Start Now / Save 50%</h2>
+                  <p class="trigger-text text-white">
+                      It is a long established fact that a reader will be distracted by the readable content of a
+                      page when looking at its layout
+                  </p>
+
+                  <a href="#" class="btn btn-white-o btn-rounded" data-toggle="modal" data-target="#get-in-touch">Get In Touch <i class="fa fa-play"></i> </a>
+
+              </div>
+
+          </div>
+      </div>
+  </section>

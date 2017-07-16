@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.all.order('created_at DESC')
   end
 def show
   #@projects = Project.where(adminuser_id: @adminuser).order('created_at DESC').reject {|p| p.id == @project.id }
