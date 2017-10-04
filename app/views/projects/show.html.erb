@@ -1,202 +1,124 @@
 <section style="background-image: url(<%= asset_path 'Ban2.png' %>); " class="secbg">
 </section>
 
-
-<!-- /Section: Page Header -->
-
 <!-- Main -->
 <main class="main-container">
-    <div class="container">
-        <div class="row">
 
-            <div class="projects-list">
+    <!-- Section: Single Project -->
+    <div class="section section-small single-project">
+        <div class="container">
+            <div class="row">
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-01.jpg">
-                                <div class="information">
-                                    <h3 class="title">App Screens</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
+                <!-- Project Images -->
+                <div class="col-md-6">
+                    <div class="image">
+
+                              <%= link_to image_path((@project.image_url)), class: "image-popup" do %>
+                            <div class="gallery-image">
+                              <%= image_tag (@project.image_url.to_s), class: "image-popup" %>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                            <% end %>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-02.jpg">
-                                <div class="information">
-                                    <h3 class="title">iPhone SE</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
+                <!-- /Project Images -->
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-03.jpg">
-                                <div class="information">
-                                    <h3 class="title">Notebook</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <!-- Project Information -->
+                <div class="col-md-6 information">
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-04.jpg">
-                                <div class="information">
-                                    <h3 class="title">iPad 2 Air Gravity</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <div class="row">
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-05.jpg">
-                                <div class="information">
-                                    <h3 class="title">Label Clothes</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
+                        <div class="col-sm-6">
+                            <h3 class="title">Project Description</h3>
                         </div>
-                    </a>
-                </div>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-06.jpg">
-                                <div class="information">
-                                    <h3 class="title">Label Brand</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-07.jpg">
-                                <div class="information">
-                                    <h3 class="title">Kraft Labels Collection</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-08.jpg">
-                                <div class="information">
-                                    <h3 class="title">Double Gate Fold Brochure</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <p>
+                        <%= raw(@project.details) %>
+                    </p>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-09.jpg">
-                                <div class="information">
-                                    <h3 class="title">A4 Paper Gravity Presentation</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <h3 class="title"><%= @project.title %></h3>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-10.jpg">
-                                <div class="information">
-                                    <h3 class="title">A4 Flyer Presentation</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-11.jpg">
-                                <div class="information">
-                                    <h3 class="title">iMac Cinema Monitor Style</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    <ul class="details">
+                        <li><span>Client: </span> <%= @project.client %></li>
+                        <li><span>Date: </span> <%= @project.created_at %></li>
 
-                <div class="col-sm-4 col-xs-12 project">
-                    <a href="single-project.html">
-                        <div class="project-image-wrapper">
-                            <div class="project-image">
-                                <img src="images/project-12.jpg">
-                                <div class="information">
-                                    <h3 class="title">Disk and Folder</h3>
-                                    <span class="category">Mockup</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </ul>
+
+                    <ul class="social-share">
+                        <li><a href="#"><i class="fa fa-fw fa-facebook"></i> 3</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-twitter"></i> 2</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-google-plus"></i> 4</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-dribbble"></i> 8</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-pinterest"></i> 19</a></li>
+                    </ul>
+
+                    <a href="#" class="btn btn-theme"><i class="icon fa fa-fw fa-check-square-o"></i> <span class="text">Live Demo</span></a>
+
                 </div>
+                <!-- /Project Information -->
 
             </div>
-
-            <!-- Pagination -->
-            <div class="col-md-12">
-                <ul class="pagination">
-                    <li><span>Page 1 of 5</span></li>
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">Next</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
-            </div>
-            <!-- /Pagination -->
-
         </div>
     </div>
+    <!-- /Section: Single Project -->
+
+    <!-- Section: Recent Projects -->
+    <section class="section section-small">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-md-12 ">
+                    <header>
+                        <h2 class="section-title">Recent Projects</h2>
+                        <p class="section-subtitle">
+                          Here are some recent projects
+                        </p>
+                    </header>
+                </div>
+            </div>
+            <!-- /Section Header -->
+
+            <!-- Section Content -->
+            <div class="row section-content">
+                <div class="col-md-12">
+
+                    <!-- Projects Carousel -->
+                    <div id="carousel-projects" class="owl-carousel owl-theme">
+                        <% @projects.each do |project| %>
+                        <!-- Project Item -->
+                        <div class="item project">
+                            <a href="single-project.html">
+                                <div class="project-image-wrapper">
+                                    <div class="project-image">
+                                        <%= image_tag (project.image_url.to_s) %>
+                                        <div class="information">
+                                            <h3 class="title"><%= project.title %></h3>
+                                            <span class="category">Mockup</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- /Project Item -->
+                        <% end %>
+
+
+
+                    </div>
+                    <!-- /Projects Carousel -->
+
+                </div>
+            </div>
+            <!-- Section Content -->
+
+        </div>
+    </section>
+    <!-- /Section: Recent Projects -->
+
 </main>
+<!-- /Main -->

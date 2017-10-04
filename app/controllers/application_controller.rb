@@ -6,11 +6,11 @@ before_action :configure_permitted_parameters, if: :devise_controller?
   protected
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update, keys:[:email, :password, :password_confirmation, :current_password, :name, :lastname, :country, :address, :postalcode, :position,
-      :bio])
+      :bio, :avatar, :facebook, :twitter, :linkedin])
     end
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys:[:email, :password, :password_confirmation, :current_password, :name, :lastname, :country, :address, :postalcode, :position,
-        :bio])
+        :bio, :avatar, :facebook, :twitter, :linkedin])
       end
 
 
@@ -18,8 +18,10 @@ before_action :configure_permitted_parameters, if: :devise_controller?
 
     private
     def layout_by_resource
-    if devise_controller?
-      "devise"
+      if devise_controller? && resource_name == :adminuser && action_name == 'new'
+        "devise"
+    elsif devise_controller? && resource_name == :adminuser && action_name == 'edit'
+      'admin'
     else
       "application"
     end

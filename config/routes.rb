@@ -1,21 +1,24 @@
 Rails.application.routes.draw do
-  resources :services
+
+  resources :categories
   namespace :admin do
     resources :accounts
+    resources :services
+    resources :learns
+    resources :projects
+    resources :abouts
   end
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :adminusers
   resources :adminusers, only: [:index, :show]
 
-  namespace :admin do
-    resources :learn, except: [:index, :show]
-    resources :projects
-  end
+
 
 
   resources :projects, only: [:index, :show]
   resources :learn, only: [:index, :show]
   resources :abouts
+  resources :services
 
 
 authenticated :adminuser do

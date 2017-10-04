@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
   end
 def show
   #@projects = Project.where(adminuser_id: @adminuser).order('created_at DESC').reject {|p| p.id == @project.id }
+  @projects = Project.all.order('created_at DESC')
 end
 
 

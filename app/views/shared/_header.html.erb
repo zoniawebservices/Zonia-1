@@ -57,15 +57,21 @@
 
                           <%else %>
                             <li class="Smooth-scroll">
-                              <%= link_to "Home", root_path %>
+                                <%= link_to "Home", root_path %>
                             </li>
                             <li> <%= link_to "Projects", projects_path, class: "smooth-scroll" %></li>
 
                             <li><a class="smooth-scroll" href="#services">Services</a></li>
-                            <li><a class="smooth-scroll" href="#our-team">Team</a></li>
-                            <li><a class="smooth-scroll" href="#features">Features</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="about.html">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about.html">About Company</a></li>
+                                    <li><a href="about-person.html">About Person</a></li>
+                                </ul>
+                            </li>
+
                             <li><a class="smooth-scroll" href="#testimonials">Testimonials</a></li>
-                            <li><a class="smooth-scroll" href="#price">Price</a></li>
+
                             <li><a class="smooth-scroll" href="#contact">Contact</a></li>
                           <% end %>
                         </ul>

@@ -94,6 +94,9 @@
 /*
  * Main Classes
  *--------------*/
+ p{
+   font-size: 16px !important;
+ }
  .lo{
    width: 60px;
    height: 50px;
@@ -103,6 +106,7 @@
    background-repeat: no-repeat;
    background-position: center top;
    background-size: cover;
+   height: 75%;
  }
 * {
   outline: none !important;
@@ -361,7 +365,7 @@ p {
 .btn:hover {
   content: '';
 }
-.btn:hover .icon {
+.btn:hover   con {
   opacity: 1.0;
   -webkit-transform: none;
   -moz-transform: none;
@@ -1054,7 +1058,7 @@ label.error {
  * General
  *---------*/
 .header {
-  height: 100%;
+  height: 80%;
 }
 .header .slider {
   height: 100%;

@@ -4,7 +4,7 @@ class Admin::ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   # GET /projects/new
   def index
-    @projects = Project.all.order('created_at DESC')
+    @projects = Project.where(adminuser_id: current_adminuser)
   end
   def new
     @project = current_adminuser.projects.build

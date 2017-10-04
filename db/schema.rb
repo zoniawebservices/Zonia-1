@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170713230744) do
+ActiveRecord::Schema.define(version: 20170731141152) do
 
   create_table "abouts", force: :cascade do |t|
     t.string   "name"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20170713230744) do
     t.string   "positon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "bio"
+    t.string   "avatar"
   end
 
   create_table "admin_accounts", force: :cascade do |t|
@@ -46,8 +48,19 @@ ActiveRecord::Schema.define(version: 20170713230744) do
     t.string   "postalcode"
     t.string   "position"
     t.string   "bio"
+    t.string   "avatar"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "linkedin"
     t.index ["email"], name: "index_adminusers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_adminusers_on_reset_password_token", unique: true
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "cimage"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -66,10 +79,12 @@ ActiveRecord::Schema.define(version: 20170713230744) do
     t.string   "details"
     t.string   "title"
     t.string   "client"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "adminuser_id"
     t.string   "image"
+    t.string   "link"
+    t.integer  "categories_id"
   end
 
   create_table "services", force: :cascade do |t|
