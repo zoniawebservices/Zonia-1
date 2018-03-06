@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :projects
     resources :abouts
   end
-  mount Ckeditor::Engine => '/ckeditor'
+  #mount Ckeditor::Engine => '/ckeditor'
   devise_for :adminusers
   resources :adminusers, only: [:index, :show]
 
