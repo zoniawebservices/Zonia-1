@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.2'
 
 # gem 'therubyracer', platforms: :ruby
 gem 'acts_as_votable', '~> 0.10.0'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'simple_form'
 gem 'aws-sdk', '< 2.0'
 gem 'aws-sdk-v1', '~> 1.66'
